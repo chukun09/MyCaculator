@@ -46,27 +46,27 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnSQRT"
+            android:id="@+id/btnCE"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="√"
+            android:text="CE"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/btnOpen"
+            android:id="@+id/btnC"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="("
+            android:text="C"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/btnClose"
+            android:id="@+id/btnBS"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text=")"
+            android:text="BS"
             android:textSize="20sp" />
 
         <Button
@@ -90,6 +90,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="7"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button
@@ -98,6 +99,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="8"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button
@@ -106,6 +108,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="9"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button
@@ -129,6 +132,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="4"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button
@@ -137,6 +141,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="5"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button
@@ -145,6 +150,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="6"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button
@@ -168,6 +174,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="1"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button
@@ -176,6 +183,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="2"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button
@@ -184,6 +192,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="3"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button
@@ -201,10 +210,10 @@
         android:layout_weight="1"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btnAC"
+            android:id="@+id/btnAddSub"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="AC"
+            android:text="+/-"
             android:layout_weight="1"
             android:textSize="20sp"
             ></Button>
@@ -214,8 +223,9 @@
             android:id="@+id/btn0"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="0"
             android:layout_weight="1"
+            android:text="0"
+            android:background="@drawable/vien2"
             android:textSize="20sp" />
 
         <Button

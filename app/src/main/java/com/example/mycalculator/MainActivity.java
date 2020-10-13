@@ -5,10 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-    Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, add, sub, mul, div, AC, equal, sqrt, dot, open, close;
+    Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, add, sub, mul, div, addsub, equal, bs, dot, ce, c;
     TextView tv1, tv2;
     Double var1, var2, ans;
     Boolean addition = false, subtract = false, multiply = false, divide = false;
@@ -32,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
         sub = findViewById(R.id.btnSub);
         mul = findViewById(R.id.btnMul);
         div = findViewById(R.id.btnDiv);
-        close = findViewById(R.id.btnClose);
-        open = findViewById(R.id.btnOpen);
-        AC = findViewById(R.id.btnAC);
+        ce = findViewById(R.id.btnCE);
+        bs = findViewById(R.id.btnBS);
+        addsub = findViewById(R.id.btnAddSub);
         equal = findViewById(R.id.btnEqual);
-        sqrt = findViewById(R.id.btnSQRT);
+        c = findViewById(R.id.btnC);
         dot = findViewById(R.id.btnDot);
 
         tv1 = findViewById(R.id.tvMath);
@@ -102,6 +101,26 @@ public class MainActivity extends AppCompatActivity {
                 tv1.setText(tv1.getText() + "0");
             }
         });
+        bs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (tv1.getText().toString().equals("")) {
+
+                } else {
+                    String s = tv1.getText().toString();
+                    s = s.substring(0, s.length() - 1);
+                    tv1.setText(s);
+                }
+            }
+        });
+        addsub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setVar1();
+                var1 = -var1;
+                tv1.setText(var1.toString());
+            }
+        });
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,14 +160,10 @@ public class MainActivity extends AppCompatActivity {
                 divide = true;
             }
         });
-        sqrt.setOnClickListener(new View.OnClickListener() {
+        ce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setVar1();
-                ans = Math.sqrt(var1);
-                tv2.setText(ans.toString());
-                equal.setEnabled(false);
-                buttonFalse();
+                tv1.setText("");
             }
         });
         equal.setOnClickListener(new View.OnClickListener() {
@@ -164,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (divide){
                     ans = var1 / var2;
                 } else {
-                    ans = ans + 0;
+                    ans = var2;
                 }
 
                 tv2.setText(ans.toString());
@@ -172,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        AC.setOnClickListener(new View.OnClickListener() {
+        c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tv1.setText("");
